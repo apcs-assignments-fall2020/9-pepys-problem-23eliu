@@ -29,15 +29,15 @@ public class MyMain {
             for (int j = 1; j <= 12; j++) {
                 if ((int) ((Math.random() * 6) + 1) == 6) {
                     scount++;
-                }
-                if (scount == 2) {
-                    count++;
-                    scount = 0;
-                    break;
+                    if (scount == 2) {
+                        count++;
+                        scount = 0;
+                        break;
+                    }
                 }
             }
         }
-        double fin = count;
+        double fin = count/100;
         return fin;
     }
 
@@ -51,20 +51,22 @@ public class MyMain {
             for (int j = 1; j <= 18; j++) {
                 if ((int) ((Math.random() * 6) + 1) == 6) {
                     scount++;
-                }
-                if (scount == 3) {
-                    count++;
-                    scount = 0;
-                    break;
+                    if (scount == 3) {
+                        count++;
+                        scount = 0;
+                        break;
+                    }
                 }
             }
         }
-        double fin = count;
+        double fin = count/100;
         return fin;
     }
 
 
     public static void main(String[] args) {
-        // YOUR CODE HERE
+        System.out.println(probabilityOneSix());
+        System.out.println(probabilityTwoSixes());
+        System.out.println(probabilityThreeSixes());
     }
 }
