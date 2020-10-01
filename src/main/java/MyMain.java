@@ -22,15 +22,45 @@ public class MyMain {
     // Calculate the probability of rolling at least two 6's when rolling 
     // twelve dice. Uses 10000 trials.
     public static double probabilityTwoSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        int count = 0;
+        int time = 10000;
+        int scount = 0;
+        for (int i = 1; i <= time; i++) {
+            for (int j = 1; j <= 12; j++) {
+                if ((int) ((Math.random() * 6) + 1) == 6) {
+                    scount++;
+                }
+                if (scount == 2) {
+                    count++;
+                    scount = 0;
+                    break;
+                }
+            }
+        }
+        double fin = count;
+        return fin;
     }
 
     // Calculate the probability of rolling at least three 6's when rolling 
     // eighteen dice. Uses 10000 trials.
     public static double probabilityThreeSixes() {
-        // REPLACE WITH YOUR CODE HERE
-        return -1.0;
+        int count = 0;
+        int time = 10000;
+        int scount = 0;
+        for (int i = 1; i <= time; i++) {
+            for (int j = 1; j <= 18; j++) {
+                if ((int) ((Math.random() * 6) + 1) == 6) {
+                    scount++;
+                }
+                if (scount == 3) {
+                    count++;
+                    scount = 0;
+                    break;
+                }
+            }
+        }
+        double fin = count;
+        return fin;
     }
 
 
